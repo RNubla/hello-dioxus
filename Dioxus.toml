@@ -14,9 +14,10 @@ out_dir = "dist"
 asset_dir = "assets"
 
 [web.app]
+base_path = "https://github.com/RNubla/hello-dioxus.git"
 
 # HTML title tag content
-title = "hell-dioxus"
+title = "hello-dioxus"
 
 [web.watcher]
 
