@@ -42,23 +42,25 @@ fn Home() -> Element {
     let mut text = use_signal(|| String::from("..."));
 
     rsx! {
-        // Link {
-        //     to: Route::Blog {
-        //         id: count()
-        //     },
-        //     "Go to blog"
-        // }
+        Link {
+            to: Route::Blog {
+                id: count()
+            },
+            "Go to blog"
+        }
         div {
             class: "container mx-auto px-4",
             h1 {
                 class:"text-3xl font-bold ",
                 "High-Five counter: {count}" }
             Button{
+                class:"btn btn-primary",
                 "Custom Button"
             }
-            button { onclick: move |_| count += 1, "Up high!" }
-            button { onclick: move |_| count -= 1, "Down low!" }
+            button { class: "btn btn-primary", onclick: move |_| count += 1, "Up high!" }
+            button { class: "btn btn-secondary", onclick: move |_| count -= 1, "Down low!" }
             button {
+                class: "btn btn-accent",
                 onclick: move |_| async move {
                     if let Ok(data) = get_server_data().await {
                         tracing::info!("Client received: {}", data);

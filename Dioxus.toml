@@ -28,6 +28,7 @@ watch_path = ["src", "assets"]
 
 # include `assets` in web platform
 [web.resource]
+# script = ["https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"]
 
 # CSS style file
 
