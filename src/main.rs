@@ -42,13 +42,14 @@ fn Home() -> Element {
     let mut text = use_signal(|| String::from("..."));
 
     rsx! {
-        Link {
-            to: Route::Blog {
-                id: count()
-            },
-            "Go to blog"
-        }
+        // Link {
+        //     to: Route::Blog {
+        //         id: count()
+        //     },
+        //     "Go to blog"
+        // }
         div {
+            class: "container mx-auto px-4",
             h1 {
                 class:"text-3xl font-bold ",
                 "High-Five counter: {count}" }
