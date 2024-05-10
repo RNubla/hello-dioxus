@@ -1,5 +1,5 @@
 #![allow(non_snake_case)]
-use dioxus::{html::button, prelude::*};
+use dioxus::prelude::*;
 use tracing::{info, Level};
 
 #[derive(PartialEq, Props, Clone)]
